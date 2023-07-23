@@ -50,3 +50,9 @@ The Genetic Algorithm is fast, but not fast enough to handle an animation delay 
 3. Press the "Start" button to initiate the Genetic Algorithm with the specified settings.
 4. Observe the beautiful animation as the algorithm progresses. (You can make real time changes with adjusting the variables.)
 5. Once the algorithm reaches the specified generation limit, it will stop, and the best route will be displayed.
+
+## Contributing
+
+If you find any issues or have suggestions for improvements, feel free to submit a pull request or open an issue.
+
+Happy Traveling Salesman Problem solving!
