@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 // ConsoleDriver reads a file path, initializes a genetic algorithm, and prints the resulting values to the console.
+// You can use it for large data instead of clicking them into GUI
 public class ConsoleDriver {
     private final ArrayList<City> initialRoute;
 // Constructor accepting a file path as a string.
@@ -45,7 +46,7 @@ public class ConsoleDriver {
         System.out.println("The Best Rout So Far: " + population.getRoutes().get(0));
         System.out.println("w/ a distance of: " + String.format("%.2f", population.getRoutes().get(0).totalDistance()) + "km");
     }
-// A special method for printing the heading of the population.
+// A special method for printing the heading of the population. (super complex)
 // Fits on any number of cities.
     private void printHeading(int generationNumber) {
         System.out.print("> Generation # "+generationNumber);

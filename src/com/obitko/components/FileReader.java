@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
+
 //  Read input data from a file and convert it into an ArrayList of City objects.
 public class FileReader {
     private final File file;

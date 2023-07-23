@@ -10,7 +10,7 @@ public class City {
         this.x = x;
         this.y = y;
     }
-//  Method for measuring distance between this instance and another city passed as an argument.
+//  Method for measuring distance between this instance and another city in passed argument.
     public double measureDistance(City city){
         double deltaX = city.getX() - this.getX();
         double deltaY = city.getY() - this.getY();

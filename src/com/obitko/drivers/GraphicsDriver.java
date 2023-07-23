@@ -158,7 +158,7 @@ public class GraphicsDriver extends javax.swing.JFrame {
             }
         });
 
-//      "Select" button - allow the user to select cities.
+//      "Select" button - allows the user to select cities.
         selectButton.setBackground(new java.awt.Color(0, 0, 255));
         selectButton.setFont(new java.awt.Font("Segoe UI", 0, 18));
         selectButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -168,7 +168,7 @@ public class GraphicsDriver extends javax.swing.JFrame {
                 selectButtonActionPerformed(evt);
             }
         });
-//      "Start" button - start the animation.
+//      "Start" button - starts the animation.
         startButton.setBackground(new java.awt.Color(0, 122, 61));
         startButton.setFont(new java.awt.Font("Segoe UI", 0, 18));
         startButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -256,7 +256,7 @@ public class GraphicsDriver extends javax.swing.JFrame {
                                                 .addComponent(image3))))
         );
 
-//      Settings for the SettingsPanel.
+//      Settings for the SettingsPanel (where the user can select the algorithm's variables).
         settingsPanel.setBackground(new java.awt.Color(249, 249, 249));
 
 //      Settings and actionListener for the first label with combo box - Number of cities.
@@ -295,6 +295,7 @@ public class GraphicsDriver extends javax.swing.JFrame {
         settingsBox3.addActionListener(e -> {
             Settings.GENERATION_LIMIT = Integer.parseInt((String) settingsBox3.getSelectedItem());
         });
+
 //      Settings and actionListener for the fourth label with combo box - Mutation rate.
         settingsLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18));
         settingsLabel4.setText("Mutation rate");
@@ -360,6 +361,8 @@ public class GraphicsDriver extends javax.swing.JFrame {
         settingsBox7.addActionListener(e -> {
             String selectedItem = (String) settingsBox7.getSelectedItem();
             // Convert percents to animation delay - the higher the speed, the lower the delay.
+            // The delay shouldn't be under 20 because the animation can't be faster than the algorithm processing
+            // It would just throw errors
             int setValue;
             switch (selectedItem){
                 case "10%": setValue = 1000;
@@ -567,7 +570,7 @@ public class GraphicsDriver extends javax.swing.JFrame {
         settingsPanel.add(populationNumber);
         settingsPanel.repaint();
         panel1.setIsSelecting(true);
-//      Start selectCities method
+        // Start selectCities method
         panel1.selectCities();
     }
 

@@ -12,11 +12,11 @@ import java.awt.event.MouseEvent;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-// AnimationPanel serves as a field for animations
+// AnimationPanel is the black field where the animation occurs
 public class AnimationPanel extends JPanel {
 //  Format pattern for rounding doubles
     private DecimalFormat DF = new DecimalFormat("#.###");
-//  Integer representing how many cities were selected
+//  Integer representing how many cities has been selected
     public int count;
     private Graphics2D g2D;
     private MouseAdapter mouseAdapter;
@@ -84,6 +84,7 @@ public class AnimationPanel extends JPanel {
     }
 //  SelectCities method is called whenever the "Select" button is pressed.
 //  It allows the user to click at the AnimationPanel and select own cities.
+//  And it's more fun
     public void selectCities() {
         gaThread.population = null;
         Settings.POPULATION_SIZE = 0;
@@ -107,6 +108,7 @@ public class AnimationPanel extends JPanel {
                         int y = e.getY();
                         String name = Integer.toString(count);
 //                      Set padding 5px, so all the dots are fully visible
+//                      That means the user can't select city that would lay on the panel's border
                         int padding = 5;
                         int panelWidth = getWidth();
                         int panelHeight = getHeight();
