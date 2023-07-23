@@ -1,4 +1,4 @@
-# Traveling Salesman Problem Solver using Genetic Algorithm and GUI
+# Traveling Salesman Problem Solver with GUI
 
 A visualisation of the Genetic Algorithm solving the Traveling Salesman Problem (TSP). The program includes a GUI that allows you to set various variables for the algorithm and animation properties.
 
