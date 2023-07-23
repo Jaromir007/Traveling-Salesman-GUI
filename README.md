@@ -13,7 +13,7 @@ A visualisation of the Genetic Algorithm solving the Traveling Salesman Problem 
 
 The following are the available settings that you can modify to adjust the behavior of the Genetic Algorithm:
 
--** Population Size
+- ** Population Size
 
 The number of routes in one population. As the number of cities grows, it's recommended to increase the population size. A larger population size generally requires fewer generations to find a solution. 
 
