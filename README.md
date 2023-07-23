@@ -13,31 +13,31 @@ A visualisation of the Genetic Algorithm solving the Traveling Salesman Problem 
 
 The following are the available settings that you can modify to adjust the behavior of the Genetic Algorithm:
 
-- ###Population Size
+### • Population Size
 
 The number of routes in one population. As the number of cities grows, it's recommended to increase the population size. A larger population size generally requires fewer generations to find a solution. 
 
-### Number of Cities
+### • Number of Cities
 
 The number of cities generated when you press the random button in the GUI. This setting only affects the animation and doesn't impact the algorithm's execution.
 
-### Number of Elite Routes 
+### • Number of Elite Routes 
 
 Elite routes are the best routes in each generation and are immune to mutation. It's suggested to increase this value with more cities, but keep it between 1 and 6.
 
-### Generation Limit 
+### • Generation Limit 
 
 The maximum number of generations the algorithm will evolve before terminating. Adjust this value based on the complexity of the problem and the time it takes to find a satisfactory solution.
 
-### Mutation Rate 
+### • Mutation Rate 
 
 The probability that a route will undergo mutation. A rate between 4 to 8 percent typically works best.
 
-### Tournament Selection Size 
+### • Tournament Selection Size 
 
 The number of routes that participate in the tournament selection process. The maximum allowed value in the GUI is 10, but for larger numbers of cities (30 and more), it's better to have a higher value. You can adjust the limit in the `GraphicDriver` class, but always select a higher `NUMB_OF_CITIES` than `TOURNAMENT_SELECTION_SIZE`.
 
-### Animation Delay 
+### • Animation Delay 
 
 **Important:** Do not set the delay below 20!
 
